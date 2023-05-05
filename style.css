@@ -1,8 +1,13 @@
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text&family=Epilogue:wght@400;700;800;900&family=Raleway:wght@500&display=swap');
 
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: 'DM Serif Display', serif;
+font-family: 'DM Serif Text', serif;
+font-family: 'Epilogue', sans-serif;
+font-family: 'Raleway', sans-serif;
 }
 
 html {
@@ -132,24 +137,21 @@ body {
   font-size: medium;
   padding: 15px;
   background-color: black;
-  margin-top: 30px;
+  text-decoration: none;
+  display: inline-flex;
 }
 
 #freed:hover{
-  background-color: black;
-  color: white;
-}
-
-#fast {
-  padding-top: 30px;
-  margin-left: 15px;
+  background-color: white;
+  color: black;
 }
 
 .hero {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
-  padding: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
 }
 
 .head{
@@ -163,15 +165,17 @@ body {
 #text2 {
   font-weight: 400;
   margin-top: 15px;
+  margin-bottom: 20px;
   
-}
-
-.pic {
-  margin-left: 200px;
 }
 
 .group{
   margin-top: 60px;
+}
+
+#man{
+  height: 450px;
+  width: 350px;
 }
 
 /* Tablets -> Downwards */
@@ -182,28 +186,40 @@ body {
 /* Phone Landscape -> Downloads */
 @media screen and (max-width: 700px) {
   .desktop-hide {
-    display: none;
+    display: flex;
+    padding: 12px 22px;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+
   }
 
   .mobile-hide {
     display: none;
   }
-
+  
   .nav-link_wrapper {
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 100vh;
-    width: 90%;
+    height: 70vh;
+    width: 50%;
     top: 0;
     right: 0;
-    background-color: gray;
+    color: white;
+    background-color: white;
     padding: 40px;
-    padding-top: 100px;
+    padding-top: 50px;
     transition: 400ms all;
     transform: translateX(100%);
+  }
+
+  .nav-link_wrapper ul li {
+    display: list-item;
+    padding: 20px;;
+    font-size: larger;
   }
 
   .nav-link_wrapper.open {
@@ -213,37 +229,38 @@ body {
   .hero{
     display: flex;
     flex-direction:column-reverse;
-    margin: 0;
-    position: static;
-    width: 500px;
+    width: 100%;
+    align-items: center;
+
   }
   .group{
-    width: 400px;
+    width: 300px;
   }
-  #text{
-    text-align:center ;
-  }
-
-  #text2{
-    text-align: center;
-  }
-
-  .pic{
-    margin: 0;
-  }
-
-  #freed{
-    margin-left: 150px;
+  .head{
+     text-align: center;
+     display: inline-block;
+     
   }
 
   #ham{
     display: block;
-    margin-left: 200px;
   }
 
   #ham:hover{
     background-color: #686868;
   }
+
+  #man{
+    height: 400px;
+    width: 350px;
+  }
+  .nav-left{
+  width: 100%;
+  justify-content: space-between;
+  }
+
+  #text2{
+    margin-bottom: 20px;}
 }
 
 /* Phone Portrait */

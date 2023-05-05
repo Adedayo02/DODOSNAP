@@ -1,10 +1,10 @@
-    var nav = document.getElementsByClassName("nav-link_wrapper");
-    var button = document.getElementById("ham");
+let nav = document.querySelector('.nav-link_wrapper')
+let button = document.querySelector('#ham')
 
-    button.onclick = function(){
+button.addEventListener('click', function () {
+  nav.classList.add('open')
+})
 
-
-    };
-
-    console.log(nav);
-    console.log(button);
+document.querySelector('.hero').addEventListener('click', function () {
+  nav.classList.remove('open')
+})
